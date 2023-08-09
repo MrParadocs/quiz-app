@@ -95,3 +95,4 @@ const quizQuestions = [
         answer: 1,
     },
 ];
+export default quizQuestions;
