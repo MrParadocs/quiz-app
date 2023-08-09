@@ -6,14 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Quiz App</title>
+  <title>QuizTime</title>
 </head>
 
 <body>
 
   <div class="wrapper">
     <nav>
-      <div class="highscore">HighScore <span id="highscore">__</span></div>
+      <div class="highscore">Score <span id="highscore">__</span></div>
       <div class="timer">Time Left <span id="timeLeft">__</span></div>
     </nav>
 
@@ -21,12 +21,23 @@
 
     <!-- Home Div -->
     <div class="intro">
-      <h1>Welcome to Quiz Time</h1>
+      <h1>Welcome to QuizTime</h1>
       <div class="instruction">
-        <p>Test your knowledge with our fun and interactive quiz!</p>
-        <p>You will be presented with a series of multiple-choice questions.</p>
-        <p>Choose the correct answer and click "Submit" to move on to the next question.</p>
-        <p>Can you get a perfect score? Let's find out!</p>
+        <p><span class="main-instruction">Challenge Your Knowledge:</span> Engage in an enlightening quiz to test your
+          understanding.</p>
+        <div class="line"></div>
+        <p><span class="main-instruction">Select Correctly:</span> Carefully choose the accurate answer and utilize the
+          "Submit" button to progress.</p>
+        <div class="line"></div>
+        <p><span class="main-instruction">Scoring System:</span> Gain 2 points for each correct response, but incur a
+          deduction of 1 point for every incorrect answer.</p>
+        <div class="line"></div>
+        <p><span class="main-instruction">Skip with Caution:</span> Opt to skip a question if uncertain, without any
+          influence on your score.</p>
+        <div class="line"></div>
+        <p><span class="main-instruction">Strive for Perfection:</span> Endeavor to achieve a perfect score by answering
+          all questions accurately.</p>
+        <div class="line"></div>
       </div>
       <button class="start-button" id="start-button">Start Quiz</button>
     </div>
@@ -51,15 +62,23 @@
               for="option4">option[4]</label></li>
         </ul>
         <button id="submit">Submit</button>
-        <button class="skip-button" id="skip-button" style="display: none;" >Skip Question</button>
+        <button class="skip-button" id="skip-button" style="display: none;">Skip Question</button>
         <p class="answer" id="answer">Answer</p>
         <button id="next" style="display: none;">Next Question</button>
-        <p id="result" style="display: none;"></p>
+        <button id="resultBtn" style="display: none;">See Your Score</button>
+      </div>
+    </div>
+    <div id="result-div" class="hidden">
+
+
+      <div  class=" result-div">
+        <p>Congratulation Quiz Completed</p>
+        <p id="result">Your Result : <span id="user-score"></span>/30 </p>
       </div>
     </div>
   </div>
   <script type="module" src="data.js"></script>
-  <script  type="module" src="script.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 
 </html>
