@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Quiz App</title>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <nav>
+      <div class="highscore">HighScore <span id="highscore">__</span></div>
+      <div class="timer">Time Left <span id="timeLeft">__</span></div>
+    </nav>
+
+
+
+    <!-- Home Div -->
+    <div class="intro">
+      <h1>Welcome to Quiz Time</h1>
+      <div class="instruction">
+        <p>Test your knowledge with our fun and interactive quiz!</p>
+        <p>You will be presented with a series of multiple-choice questions.</p>
+        <p>Choose the correct answer and click "Submit" to move on to the next question.</p>
+        <p>Can you get a perfect score? Let's find out!</p>
+      </div>
+      <button class="start-button" id="start-button" onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+
+
+
+    <!-- Quiz div -->
+    <div class="hidden" id="quiz-wrapper">
+
+
+      <div class="hidden" class="quiz-div" id="quiz-div">
+        <p id="question">Question</p>
+        <ul>
+          <li><input type="radio" name="option" id="option1" class="options" value="0"><label
+              for="option1">option[1]</label></li>
+          <li><input type="radio" name="option" id="option2" class="options" value="1"><label
+              for="option2">option[2]</label></li>
+          <li><input type="radio" name="option" id="option3" class="options" value="2"><label
+              for="option3">option[3]</label></li>
+          <li><input type="radio" name="option" id="option4" class="options" value="3"><label
+              for="option4">option[4]</label></li>
+        </ul>
+        <button id="submit">Submit</button>
+        <button class="skip-button" id="skip-button" style="display: none;" >Skip Question</button>
+        <p class="answer" id="answer">Answer</p>
+        <button id="next" style="display: none;">Next Question</button>
+        <p id="result" style="display: none;"></p>
+      </div>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>
